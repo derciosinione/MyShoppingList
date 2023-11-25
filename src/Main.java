@@ -32,8 +32,7 @@ public class Main {
                     menuEditarLista();
                     break;
                 case "F":
-
-                    System.out.println("\nVc escolheu fazer compras\n");
+                    menuFazerCompras();
                     break;
                 case "C":
                     System.out.println("\nVc escolheu fazer contas\n");
@@ -50,6 +49,44 @@ public class Main {
         } while (continuiar);
     }
 
+
+    // Menu de Fazer compras
+    public static void menuFazerCompras(){
+        System.out.println("\n Vc escolheu editar a lista \n");
+
+        boolean continuar = true;
+
+        while (continuar){
+            String escolha;
+            System.out.println("(M)arcar primeiro item por comprar.\n" +
+                    "(D)esmarcar primeiro item comprado.\n" +
+                    "Trocar estado por (n)ome.\n" +
+                    "Trocar estado por (p)osição.\n" +
+                    "(L)istar.\n" +
+                    "(V)oltar.");
+
+            System.out.printf("Informe a opção desejada: ");
+            escolha = scanner.next();
+
+            switch (escolha.toUpperCase()){
+                case "M":
+                    //TODO Implementar a escolha (M)arcar primeiro item por comprar
+                    break;
+                case "P":
+                    //TODO Implementar a escolha (D)esmarcar primeiro item comprado.
+                    break;
+                case "V":
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Opção não implementada!!! Tente novamente");
+            }
+        }
+    }
+
+
+
+    // Menu de Editar Lista
     public static void menuEditarLista(){
         System.out.println("\n Vc escolheu editar a lista \n");
 
